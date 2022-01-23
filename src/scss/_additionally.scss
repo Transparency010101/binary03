@@ -1,0 +1,51 @@
+// Nav: Переменные
+// Nav: Функции и миксины
+// Nav: Шаблоны
+
+// ! Переменные
+$container: 1120;
+$nullfz: 16;
+$-c-3c3c3c: #3c3c3c;
+$-c-f8f7f7: #f8f7f7;
+$-c-868585: #868585;
+$-c-a4a4a4: #a4a4a4;
+
+
+// ! Функции и миксины
+// * Адптивное свойство
+@mixin adapProp($propetry, $minSize, $startSize) {
+    #{$propetry}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / ($container - 320)));
+}
+
+// * Адаптивный шрифт
+@mixin adapf($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $container: $container - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$container}));
+}
+
+// * Подключение шрифтов
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+// * px to rem
+@function rem($value) {
+    $remValue: math.div($value, $nullfz) + rem;
+    @return $remValue;
+}
+
+// * px to em
+@function em($value) {
+    $remValue: math.div($value, $nullfz) + em;
+    @return $remValue;
+}
+
+// ! Шаблоны
+// none

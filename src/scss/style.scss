@@ -1,0 +1,50 @@
+@use "sass:math";
+// Nav: Миксины, переменные, шаблоны
+/* Nav: Разные настройки */
+/* Nav: Helper classes */
+/* Nav: import assets */
+
+/* ! Миксины, переменные, шаблоны и шрифты */
+@import "_additionally";
+@import "_fonts";
+
+/* Разные настройки */
+.container {
+    max-width: $container + px;
+    margin: 0 auto;
+}
+
+/* Helper classes */
+.black-line {
+    width: 81px;
+    height: 1px;
+    background-color: #000000;
+}
+
+.button {
+    display: block;
+    cursor: pointer;
+    width: rem(182);
+    height: rem(47);
+
+    transition: all 0.3s ease 0s;
+}
+
+.button-text {
+    font-size: rem(16);
+    line-height: rem(40);
+    letter-spacing: 0.06rem;
+}
+
+// * Заголовок
+// .headlines {
+//     &__title {
+//     }
+
+//     &__line {
+//     }
+// }
+
+/* ! import assets */
+@import "_nullstyle";
+@import "assets/_face.scss";

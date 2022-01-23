@@ -1,0 +1,77 @@
+/* Nav: face */
+
+.face {
+    background-image: url("@img/face/face_bg.jpg");
+    background-repeat: no-repeat;
+
+    &__body {
+        max-width: rem(760);
+        margin: 0 auto;
+        padding: rem(5);
+        text-align: center;
+    }
+
+    &__logo {
+        margin: 150px 0 150px 0;
+        & img {
+            max-width: 100%;
+        }
+    }
+
+    &__texts div {
+        color: #fff;
+        letter-spacing: 0.16rem;
+        line-height: rem(40);
+    }
+
+    &__title {
+        font-size: rem(34);
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    &__sub-title {
+        font-size: rem(26);
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    &__line {
+        width: rem(105);
+        height: 2px;
+        background-color: #fff;
+        margin: 50px auto rem(225) auto;
+    }
+
+    &__button {
+        border: 1px solid #fff;
+        margin: 0 auto 75px auto;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__button-text {
+        letter-spacing: 0.06em;
+        color: #fff;
+    }
+
+    &__arrow-down {
+        padding-bottom: 120px;
+    }
+
+    @media (max-width: em(768)) {
+        &__title {
+            @include adapf(20, 34);
+        }
+
+        &__sub-title {
+            @include adapf(20, 26);
+        }
+    }
+}
+
+// * Это стиль для arrown down
+.fas {
+    color: #fff;
+}
