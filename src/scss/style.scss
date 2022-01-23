@@ -4,7 +4,7 @@
 /* Nav: Helper classes */
 /* Nav: import assets */
 
-// ! Миксины, переменные, шаблоны и  
+// ! Миксины, переменные, шаблоны и
 @import "_additionally";
 /* ! Шрифты */
 @import "_fonts";
@@ -17,6 +17,8 @@
 
 /* Helper classes */
 .black-line {
+    margin: 0 auto;
+
     width: 81px;
     height: 1px;
     background-color: #000000;
@@ -38,14 +40,31 @@
 }
 
 // * Заголовок
-// .headlines {
-//     &__title {
-//     }
+.headlines {
+    text-align: center;
 
-//     &__line {
-//     }
-// }
+    & div {
+        margin-bottom: rem(25);
+    }
+
+    &__title {
+        font-size: rem(34);
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.16rem;
+        color: #000000;
+    }
+
+    &__text {
+        font-size: rem(14);
+        line-height: rem(25);
+        font-weight: 300;
+        color: #868585;
+    }
+}
 
 /* ! import assets */
 @import "_nullstyle";
 @import "assets/_face.scss";
+@import "assets/_about.scss";
