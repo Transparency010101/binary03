@@ -1,6 +1,7 @@
 "use strict";
+
 import * as fileIsWebP from './modules/flsfunc.js';
 
-fileIsWebP.isWebp();
+import "./scripts/smallscript.js";
 
-console.log("Hello world!");
+fileIsWebP.isWebp();

@@ -1,32 +1,29 @@
-@use "sass:math";
-/* Nav: Шрифты */
-/* Nav: Разные настройки */
-/* Nav: Helper classes */
-/* Nav: import assets */
+// : Миксины, переменные, шаблон
+/* : Повторяющиеся классы */
+/* : Импорт частей кода */
 
-// ! Миксины, переменные, шаблоны и
+
+// ! Миксины, переменные, шаблоны {
+
 @import "_additionally";
-/* ! Шрифты */
 @import "_fonts";
 
-/* Разные настройки */
+// ! Миксины, переменные, шаблоны }
+
+
+/* ! Повторяющиеся классы или мискины { */
+
 .container {
     max-width: $container + px;
-    margin: 0 auto;
-}
 
-/* Helper classes */
-.black-line {
     margin: 0 auto;
-
-    width: 81px;
-    height: 1px;
-    background-color: #000000;
 }
 
 .button {
     display: block;
+
     cursor: pointer;
+
     width: rem(182);
     height: rem(47);
 
@@ -39,15 +36,11 @@
     letter-spacing: 0.06rem;
 }
 
-// * Заголовок
+// * Стили заголовоков
 .headlines {
     text-align: center;
 
-    & div {
-        margin-bottom: rem(25);
-    }
-
-    &__title {
+    &-title {
         font-size: rem(34);
         line-height: 1.2;
         font-weight: 700;
@@ -56,15 +49,39 @@
         color: #000000;
     }
 
-    &__text {
+    &-text {
         font-size: rem(14);
         line-height: rem(25);
         font-weight: 300;
         color: #868585;
     }
+
+    &-line--color {
+        margin: 0 auto;
+    
+        width: 81px;
+        height: 1px;
+    
+        background-color: #000000;
+    }
+
+    @include headlinesContentAfterLine("text") {
+        margin: 0 auto;
+        max-width: rem(690);
+    }
+
+    & * {
+        @include margin-down(25);
+    }
 }
 
-/* ! import assets */
+/* ! Повторяющиеся классы } */
+
+
+/* ! Импорт частей кода { */
+
 @import "_nullstyle";
 @import "assets/_face.scss";
 @import "assets/_about.scss";
+
+/* ! Импорт частей кода } */

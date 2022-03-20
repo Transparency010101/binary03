@@ -11,19 +11,20 @@
                         a(href="#") PORTFOLIO
                     li.header__link
                         a(href="#") CONTACT
-        .about__body
+        .about__content
             .about__headlines
-                +headlines("ABOUT")
-                    .headlines__text.
+                +headline("ABOUT")
+                    .headlines-text.
                         We specialize in contemporary, functional, and stunning websites with design that really brings that "WOW" factor. 
                         In our design process, we make sure to stay one step ahead of the latest trends, 
                         never forgetting to abide by key web standards.
+            // about cards {
             .about-cards
                 .about-cards__row
                     .about-cards__column
                         .about-cards__item
                             .about-cards__icon
-                                img(src="@img/about/about_cards__icon_web.png", alt="card icon web")
+                                img(src="@img/about/about_cards__icon_web.png" alt="card icon web")
                             .about-cards__caption WEB
                             .about-cards__text.
                                 We tend to deliver unique and 
@@ -32,7 +33,7 @@
                     .about-cards__column
                         .about-cards__item
                             .about-cards__icon
-                                img(src="@img/about/about_cards__icon_ios.png", alt="card icon IOS")
+                                img(src="@img/about/about_cards__icon_ios.png" alt="card icon IOS")
                             .about-cards__caption iOS AND ANDROID
                             .about-cards__text.
                                 We seek to bring new businesses and 
@@ -41,9 +42,10 @@
                     .about-cards__column
                         .about-cards__item
                             .about-cards__icon
-                                img(src="@img/about/about_cards__icon_marketing.png", alt="card icon marketing")
+                                img(src="@img/about/about_cards__icon_marketing.png" alt="card icon marketing")
                             .about-cards__caption MARKETING
                             .about-cards__text.
-                                We’ll help you establish the right goals 
+                                We'll help you establish the right goals 
                                 and build the right paths. Success depends 
                                 on setting the right intention.
+            // about cards }

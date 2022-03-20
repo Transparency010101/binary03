@@ -1,17 +1,25 @@
-// Nav: Переменные
-// Nav: Функции и миксины
-// Nav: Шаблоны
+// : Переменные
+// : Функции и миксины
+// : Шаблоны
 
-// ! Переменные
+@use "sass:math";
+
+// ! Переменные {
+
 $container: 1120;
 $nullfz: 16;
+// * -с- это от сокращения color
+// * (так проще писать чем $-color-3c3c3c)
 $-c-3c3c3c: #3c3c3c;
 $-c-f8f7f7: #f8f7f7;
 $-c-868585: #868585;
 $-c-a4a4a4: #a4a4a4;
 
+// ! Переменные }
 
-// ! Функции и миксины
+
+// ! Функции и миксины {
+
 // * Адптивное свойство
 @mixin adapProp($propetry, $minSize, $startSize) {
     #{$propetry}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / ($container - 320)));
@@ -24,8 +32,7 @@ $-c-a4a4a4: #a4a4a4;
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$container}));
 }
 
-// * Подключение шрифтов
-@mixin font($font_name, $file_name, $weight, $style) {
+@mixin font-face($font_name, $file_name, $weight, $style) {
     @font-face {
         font-family: $font_name;
         font-display: swap;
@@ -35,17 +42,40 @@ $-c-a4a4a4: #a4a4a4;
     }
 }
 
-// * px to rem
+@mixin margin-down($margin-bottom) {
+    // * отступы для преведущих элементов к следуйщим
+    // * (так быстрее код пишется)
+    margin-bottom: rem($margin-bottom);
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@mixin headlinesContentAfterLine($class) {
+    // * Этот миксин добовляет класс для
+    // * тегов после headlines-line
+    // * в файле _additional.pug.
+    &-#{$class} {
+        @content
+    }
+}
+
+// * конвертация px в rem
 @function rem($value) {
     $remValue: math.div($value, $nullfz) + rem;
     @return $remValue;
 }
 
-// * px to em
+// * конвертация px в em
 @function em($value) {
     $remValue: math.div($value, $nullfz) + em;
     @return $remValue;
 }
 
-// ! Шаблоны
+// ! Функции и миксины }
+
+// ! Шаблоны {
+
 // none
+
+// ! Шаблоны }

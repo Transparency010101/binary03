@@ -1,4 +1,4 @@
-/* Nav: face */
+/* : face */
 
 .face {
     background-image: url("../img/face/face_bg.jpg");
@@ -71,7 +71,8 @@
     }
 }
 
-// * Это стиль для arrown down
+// * Это стиль для .face__arrow-down
+// * в файле face.pug
 .fas {
     color: #fff;
 }

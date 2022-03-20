@@ -1,4 +1,4 @@
-// Проврка браузера на поддержу webp изображений
+// * Проверка браузера на поддержу webp изображений
 export function isWebp() {
 
     function testWebp(callback) {

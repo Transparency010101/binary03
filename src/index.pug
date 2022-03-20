@@ -1,28 +1,14 @@
 doctype html
 html(lang="zxx")
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        // $ Подлюбчение стилей и шрифтов
-        link(rel="stylesheet" href="css/style.min.css")
-        // $ Адаптив
+        include html/_head.pug
+        // * Адаптив
         //- meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
         meta(name="viewport" content="width=device-width")
-        // $ Отключает форматирование ссылки у номера телефона на IOS
-        meta(name="format-detection" content="telephone=no")
-        // $ Описание страницы
-        meta(name="description" content="simple site")
-        meta(name="keywords" content="binary, Binary")
-        // $ Индексация
-        meta(name="robots" content="none")
-        // $ Авторские права
-        meta(name="Author" content="Transparency")
-        meta(name="Copyright" content="Transparency")
-        meta(name="Address" content="Unknown")
-        // $ Перенаправление
-        //- meta(http-equiv="refresh" content="0; url=/")
+        //- * CSS стили
+        link(rel="stylesheet" href="css/style.min.css")
         title Binary
-    body 
+    body
         include _additional.pug
         .wrapper
             .page
@@ -30,8 +16,3 @@ html(lang="zxx")
                 include html/_about.pug
         script(src="https://kit.fontawesome.com/a580a0af1c.js" crossorigin="anonymous")
         script(src="js/app.min.js")
-        noscript
-            .noscript
-                .noscript__title Внимание!
-                .noscript__title-sub В вашем браузере отключен JavaScript!Или установлена старая версия JavaScript!
-                .noscript__text Без него большая часть функционала сайта работать не будет или будет работать некорректно!
