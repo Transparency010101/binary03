@@ -1,5 +1,6 @@
 /* : face */
 
+
 .face {
     background-image: url("../img/face/face_bg.jpg");
     background-repeat: no-repeat;
@@ -68,8 +69,13 @@
         &__sub-title {
             @include adapf(20, 26);
         }
+
+        &__arrow-down {
+            padding-bottom: 30px;
+        }
     }
 }
+
 
 // * Это стиль для .face__arrow-down
 // * в файле face.pug

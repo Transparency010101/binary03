@@ -25,5 +25,4 @@ aboutCardsColumn.forEach(el => {
 });
 
 
-
 // ! Измение свойсва flex для карточек в about-cards- }

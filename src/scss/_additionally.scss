@@ -6,7 +6,7 @@
 
 // ! Переменные {
 
-$container: 1120;
+$container: 1280;
 $nullfz: 16;
 // * -с- это от сокращения color
 // * (так проще писать чем $-color-3c3c3c)
@@ -22,7 +22,7 @@ $-c-a4a4a4: #a4a4a4;
 
 // * Адптивное свойство
 @mixin adapProp($propetry, $minSize, $startSize) {
-    #{$propetry}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / ($container - 320)));
+    #{$propetry}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / (#{$container} - 320)));
 }
 
 // * Адаптивный шрифт
@@ -32,7 +32,7 @@ $-c-a4a4a4: #a4a4a4;
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$container}));
 }
 
-@mixin font-face($font_name, $file_name, $weight, $style) {
+@mixin includeFonts($font_name, $file_name, $weight, $style) {
     @font-face {
         font-family: $font_name;
         font-display: swap;
@@ -53,10 +53,11 @@ $-c-a4a4a4: #a4a4a4;
 
 @mixin headlinesContentAfterLine($class) {
     // * Этот миксин добовляет класс для
-    // * тегов после headlines-line
+    // * тегов после .headlines-line
     // * в файле _additional.pug.
+    // * Используется миксин в style.scss
     &-#{$class} {
-        @content
+        @content;
     }
 }
 

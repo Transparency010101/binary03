@@ -2,6 +2,7 @@
 /* : header */
 /* : about-cards */
 
+
 .about {
     // &__content {
     // }
@@ -38,28 +39,51 @@
         color: #3c3c3c;
 
         transition: all 0.4s ease 0s;
+
         &:hover {
             font-weight: 700;
             color: #ada074;
+        }
+    }
+
+    @media (max-width: em(786)) {
+        &__link a {
+            @include adapProp("padding", 2, 20);
+            @include adapf(15, 13);
         }
     }
 }
 
 
 .about-cards {
+    margin-bottom: 95px;
     &__row {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__column {
-        flex: 1 1 33.333%;
+        flex: 0 1 33.333%;
     }
 
     &__item {
         text-align: center;
+        width: 263px;
+        margin: 0 auto;
     }
 
     &__icon {
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+
+        width: 92px;
+        height: 92px;
+
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img {
             max-width: 100%;
         }
@@ -72,8 +96,6 @@
     }
 
     &__text {
-        margin: 0 auto;
-
         font-size: rem(14);
         line-height: rem(26);
         font-weight: 300;
@@ -82,5 +104,11 @@
 
     &__item * {
         @include margin-down(20);
+    }
+
+    @media (max-width: em(786)) {
+        &__column {
+            @include margin-down(40);
+        }
     }
 }
