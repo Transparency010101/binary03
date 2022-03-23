@@ -1,81 +1,13 @@
 // : Миксины, переменные, шаблон
-/* : Повторяющиеся классы */
 /* : Импорт частей кода */
 
 
-// ! Миксины, переменные, шаблоны {
+@import "_additionally"; // ! Миксины, переменные, шаблоны
 
-@import "_additionally";
-@import "_fonts";
-
-// ! Миксины, переменные, шаблоны }
-
-
-/* ! Повторяющиеся классы или мискины { */
-
-.container {
-    max-width: $container + px;
-
-    margin: 0 auto;
-}
-
-.button {
-    display: block;
-
-    cursor: pointer;
-
-    width: rem(182);
-    height: rem(47);
-
-    transition: all 0.3s ease 0s;
-}
-
-.button-text {
-    font-size: rem(16);
-    line-height: rem(40);
-    letter-spacing: 0.06rem;
-}
-
-// * Стили заголовоков
-.headlines {
-    text-align: center;
-
-    &-title {
-        font-size: rem(34);
-        line-height: 1.2;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.16rem;
-        color: #000000;
-    }
-
-    &-text {
-        font-size: rem(14);
-        line-height: rem(25);
-        font-weight: 300;
-        color: #868585;
-    }
-
-    &-line--color {
-        margin: 0 auto;
-    
-        width: 81px;
-        height: 1px;
-    
-        background-color: #000000;
-    }
-
-    @include headlinesContentAfterLine("text") {
-        margin: 0 auto;
-        max-width: rem(691);
-    }
-
-    & * {
-        @include margin-down(25);
-    }
-}
-
-/* ! Повторяющиеся классы } */
+@include includeFonts("Lato", "Lato-Black", 900, normal);
+@include includeFonts("Lato", "Lato-Bold", 700, normal);
+@include includeFonts("Lato", "Lato-Regular", 400, normal);
+@include includeFonts("Lato", "Lato-Light", 300, normal);
 
 
 /* ! Импорт частей кода { */
@@ -83,5 +15,6 @@
 @import "_nullstyle";
 @import "assets/_face.scss";
 @import "assets/_about.scss";
+@import "assets/_portfolio.scss";
 
 /* ! Импорт частей кода } */

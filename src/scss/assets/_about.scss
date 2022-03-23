@@ -1,53 +1,16 @@
-/* : about */
-/* : header */
+/* : menu */
 /* : about-cards */
+/* : .about__headlines */
 
 
-.about {
-    // &__content {
-    // }
-
-    &__headlines {
+.menu {
+    &-navigation {
+        // * Отступ от menu  к .about__content
         margin-bottom: 60px;
-    }
-}
-
-
-.header {
-    margin-bottom: 125px;
-
-    &__navigation {
-        padding: rem(15) 0;
-    }
-
-    &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__link {
-        margin: 0 rem(5);
-    }
-
-    &__link a {
-        padding: rem(20);
-
-        font-size: rem(15);
-        line-height: 1.2;
-        font-weight: 400;
-        color: #3c3c3c;
-
-        transition: all 0.4s ease 0s;
-
-        &:hover {
-            font-weight: 700;
-            color: #ada074;
-        }
     }
 
     @media (max-width: em(786)) {
-        &__link a {
+        &-link a {
             @include adapProp("padding", 2, 20);
             @include adapf(15, 13);
         }
@@ -59,6 +22,7 @@
     margin-bottom: 95px;
     &__row {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
@@ -102,7 +66,7 @@
         color: #868585;
     }
 
-    &__item * {
+    &__item > * {
         @include margin-down(20);
     }
 
@@ -111,4 +75,9 @@
             @include margin-down(40);
         }
     }
+}
+
+
+.about__headlines {
+    margin-bottom: 70px;
 }

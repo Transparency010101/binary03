@@ -1,0 +1,65 @@
+// : portfolio
+// : portfolio-grid
+
+
+.portfolio {
+    background-color: #f3f3f3;
+    padding: 100px 0;
+
+    &__headlines {
+        & > * {
+            @include margin-down(45);
+        }
+    }
+
+    &__content {
+        & > * {
+            @include margin-down(65);
+        }
+    }
+
+    &__button {
+        border-color: #000;
+
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 60px;
+    }
+
+    &__button-text {
+        color: #000;
+        text-transform: uppercase;
+    }
+}
+
+
+.portfolio-grid {
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    &__column {
+        width: 538px;
+        height: 365px;
+
+        background-color: #eaeaea;
+
+        justify-self: center;
+    }
+
+    @media (max-width:em(1095)) {
+        &__box {
+            grid-template-columns: 1fr;
+        }
+
+        &__column {
+            @include adapProp("width", 300, 538);
+            @include adapProp("height", 265, 365);
+            margin: 0 10px;
+        }
+    }
+}

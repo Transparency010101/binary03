@@ -1,8 +1,7 @@
+@use "sass:math";
 // : Переменные
 // : Функции и миксины
 // : Шаблоны
-
-@use "sass:math";
 
 // ! Переменные {
 
@@ -16,7 +15,6 @@ $-c-868585: #868585;
 $-c-a4a4a4: #a4a4a4;
 
 // ! Переменные }
-
 
 // ! Функции и миксины {
 
@@ -77,6 +75,126 @@ $-c-a4a4a4: #a4a4a4;
 
 // ! Шаблоны {
 
-// none
+// * стили menu (файл _about.pug 6 строка) {
+
+.menu {
+    margin-bottom: 125px;
+
+    &-navigation {
+        padding: rem(15) 0;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-link {
+        margin: 0 rem(5);
+    }
+
+    &-link a {
+        padding: rem(20);
+
+        font-size: rem(15);
+        line-height: 1.2;
+        font-weight: 400;
+        color: #3c3c3c;
+
+        transition: all 0.4s ease 0s;
+        &:hover {
+            font-weight: 700;
+            color: #ada074;
+        }
+    }
+
+    @media (max-width: em(786)) {
+        &__link a {
+            @include adapProp("padding", 2, 20);
+            @include adapf(15, 13);
+        }
+    }
+}
+
+// * Стили навигации (файл _about.pug 6 строка) }
+
+// * Стили заголовоков {
+
+.headlines {
+    text-align: center;
+
+    &-title {
+        font-size: rem(34);
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.16rem;
+        color: #000000;
+    }
+
+    &-text {
+        font-size: rem(14);
+        line-height: rem(25);
+        font-weight: 300;
+        color: #868585;
+    }
+
+    &-line--color {
+        margin: 0 auto;
+
+        width: 81px;
+        height: 1px;
+
+        background-color: #000000;
+    }
+
+    @include headlinesContentAfterLine("text") {
+        margin: 0 auto;
+        max-width: rem(691);
+    }
+
+    & * {
+        @include margin-down(25);
+    }
+}
+
+// * Стили заголовоков }
+
+// * Основная кнопка {
+
+.button {
+    display: block;
+
+    margin: 0 auto 75px auto;
+
+    cursor: pointer;
+
+    border-width: 1px;
+    border-style: solid;
+
+    width: rem(182);
+    height: rem(47);
+
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &-text {
+        font-size: rem(16);
+        line-height: rem(40);
+        letter-spacing: 0.06rem;
+    }
+}
+
+// * Основная кнопка }
+
+.container {
+    max-width: $container + px;
+
+    margin: 0 auto;
+}
 
 // ! Шаблоны }

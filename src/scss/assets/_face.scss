@@ -1,4 +1,5 @@
 /* : face */
+/* : .fas */
 
 
 .face {
@@ -45,11 +46,11 @@
     }
 
     &__button {
-        border: 1px solid #fff;
+        border-color: #fff;
         margin: 0 auto 75px auto;
-        &:hover {
-            opacity: 0.5;
-        }
+
+        display: flex;
+        justify-content: center;
     }
 
     &__button-text {
@@ -78,7 +79,7 @@
 
 
 // * Это стиль для .face__arrow-down
-// * в файле face.pug
+// * в файле _face.pug
 .fas {
     color: #fff;
 }
