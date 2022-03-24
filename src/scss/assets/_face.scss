@@ -4,6 +4,7 @@
 
 .face {
     background-image: url("../img/face/face_bg.jpg");
+    background-attachment: fixed;
     background-repeat: no-repeat;
 
     &__body {
