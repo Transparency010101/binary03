@@ -1,0 +1,43 @@
+/* : footer */
+
+.footer {
+    padding: 40px 0;
+    background-color: #3c3c3c;
+
+    &__box {
+        text-align: center;
+
+        & > * {
+            @include margin-down(35);
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        margin-right: 20px;
+        & a {
+            font-family: Lato;
+            line-height: 1.2;
+            color: #a4a4a4;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__text {
+        line-height: 1.2;
+        color: #6c6c6c;
+    }
+}

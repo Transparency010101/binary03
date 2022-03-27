@@ -2,7 +2,9 @@
 /* : Импорт частей кода */
 
 
-@import "_additionally"; // ! Миксины, переменные, шаблоны
+// ! Миксины, переменные, шаблоны
+@import "_additionally"; 
+
 
 @include includeFonts("Lato", "Lato-Black", 900, normal);
 @include includeFonts("Lato", "Lato-Bold", 700, normal);
@@ -18,5 +20,6 @@
 @import "assets/_portfolio.scss";
 @import "assets/_partner.scss";
 @import "assets/_contact.scss";
+@import "assets/_footer.scss";
 
 /* ! Импорт частей кода } */
