@@ -104,6 +104,7 @@ $-c-a4a4a4: #a4a4a4;
         line-height: 1.2;
         font-weight: 400;
         color: #3c3c3c;
+        text-transform: uppercase;
 
         transition: all 0.4s ease 0s;
         &:hover {
@@ -189,6 +190,8 @@ $-c-a4a4a4: #a4a4a4;
         font-size: rem(16);
         line-height: rem(40);
         letter-spacing: 0.06rem;
+
+        text-transform: uppercase;
     }
 }
 

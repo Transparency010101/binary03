@@ -1,0 +1,32 @@
+.contact
+    .container
+        .contact__content
+            .contact__headline
+                +headline("CONTACT")
+            .contact__main-content
+                form(action="#").contact-form
+                    .contact-form__inputs
+                        .contact-form__input
+                            .contact-form__title YOUR NAME
+                            input(type="text" name="your name")
+                        .contact-form__input
+                            .contact-form__title YOUR E-MAIL
+                            input(type="email" name="your email")
+                    .contact-form__textarea
+                        .contact-form__title MESSAGE
+                        textarea(name="message")
+                    .contact-form__button
+                        button(type="submit").contact-form__button-text Send
+                .contact-help
+                    .contact-help__text.
+                        Have an idea for a project? Just looking to 
+                        explore and see the possibilities?
+                        I'm here to help.
+                    .contact-help__contacts
+                        .contact-help__postma-elena Postma Elena
+                        .contact-help__social-network
+                            .contact-help__social-network-icon
+                                img(src='@img/contact/facebook_icon.png' alt='facebook')
+                            .contact-help__social-network-icon
+                                img(src='@img/contact/instagram_icon.png' alt='instagram')
+                        .contact-help__email e-mail: <span>postma.elena@gmail.com</span>

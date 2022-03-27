@@ -2,8 +2,10 @@
 
 
 .partner {
-    background: url("../img/partner/bg_partner.png") 0 0 no-repeat fixed;
+    background: url("../img/partner/bg_partner.png") bottom no-repeat local;
     padding: 80px 0;
+
+    margin-bottom: 175px;
     
     &__content > * {
         @include margin-down(80);
@@ -20,7 +22,7 @@
     &__partners {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     &__headlines {
