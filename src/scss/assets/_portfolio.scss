@@ -51,6 +51,12 @@
         justify-self: center;
     }
 
+    @for $i from 1 through 4 {
+        &__column.filter_#{$i}.active {
+            display: none;
+        }
+    }
+
     @media (max-width:em(1095)) {
         &__box {
             grid-template-columns: 1fr;
@@ -63,3 +69,37 @@
         }
     }
 }
+
+.portfolio {
+
+    &__content {
+    }
+
+    &__headlines {
+    }
+
+    &__button {
+    }
+
+    &__button-text {
+    }
+}
+
+.portfolio-data-filter {
+
+    &__link {
+    }
+}
+
+// .filter {
+
+//     &_2 {
+//     }
+
+//     &_4 {
+//     }
+
+//     &_3 {
+//     }
+// }
+

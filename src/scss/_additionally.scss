@@ -53,9 +53,8 @@ $-c-a4a4a4: #a4a4a4;
 
 @mixin headlinesContentAfterLine($class) {
     // * Этот миксин добовляет класс для
-    // * тегов после .headlines-line
+    // * тегов после класса .headlines-line
     // * в файле _additional.pug.
-    // * Используется миксин в style.scss
     &-#{$class} {
         @content;
     }
